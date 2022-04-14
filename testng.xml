@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+
+		<listener class-name="com.automationFramework.Utils.CustomListener"></listener>
+		<listener class-name="com.automationFramework.RetryLogic.TransformerforRetry"></listener>
+		<listener class-name="com.automationFramework.ExtentRepots.ExtentReportListener"></listener>
+	</listeners>
+
+	<test thread-count="5" name="Test">
+		<classes>
+			<!-- <groups>
+			<run>
+				<include name="Sanity"></include>
+			</run>
+		</groups> -->
+			
+			<class name="com.automationFramework.ContactUSTests.ContactUsHomePageTest" />
+			<class name="com.automationFramework.AccountSignUpTests.UserProfileDetailsTest" />		
+			<class name="com.automationFramework.ProductDeletionTest.ProductAmendmentTest" />
+			<class name="com.automationFramework.ProductSearchTest.ProductSpecificationsTest"/>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
